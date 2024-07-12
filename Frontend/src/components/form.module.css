@@ -1,0 +1,29 @@
+ #submit {
+      width: 90%;
+      margin: auto;
+      margin-top: 10px;
+      color: white;
+      border: none;
+      background: teal;
+      cursor: pointer;
+      border-radius: 15px;
+      padding: 10;
+    }
+     input
+     {
+      width: 90%;
+      display: block;
+      margin: auto;
+      margin-top: 15px;
+      font-size: 20px;
+      padding: 2%;
+    }
+     form {
+      width: 400px;
+      border: 1px solid rgb(230, 230, 230);
+      margin: 3% auto;
+      padding: 3%;
+      background: white;
+      border-radius: 10px;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
