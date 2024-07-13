@@ -13,7 +13,8 @@ import {
 } from "@chakra-ui/react";
 import { Button } from "@chakra-ui/react";
 
-function Table() {
+function Table({count}) {
+  console.log(count)
   const [list, setList] = useState([]);
   const [selectedItemId, setSelectedItemId] = useState(null);
   const [name, setName] = useState("");
@@ -21,7 +22,8 @@ function Table() {
   const [email, setEmail] = useState("");
   const toast = useToast();
 
-  // Fetch data function
+
+  //Fetch data function
   const getData = () => {
     axios
       .get("https://basix-3.onrender.com/todo")
@@ -102,7 +104,7 @@ function Table() {
 
   useEffect(() => {
     getData();
-  }, []);
+  }, [count]);
 
   return (
     <div>

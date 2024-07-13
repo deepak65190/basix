@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useToast } from "@chakra-ui/react";
 import "./form.module.css";
-
+import Table from "./Table";
 export default function Form() {
   const [name, setName] = useState("");
   const [rollNum, setRollNum] = useState("");
   const [email, setEmail] = useState("");
+  const [count ,setCount]=useState(0)
   const toast = useToast();
 
   const handleForm = (event) => {
@@ -28,12 +29,12 @@ export default function Form() {
             duration: 2000,
             isClosable: true,
           });
-        
+        setCount((prev)=>prev+1)
           setName("");
           setRollNum("");
           setEmail("");
         }
-        window.location.reload()
+        // window.location.reload()
       })
       .catch((err) => {
         console.error("Error posting data:", err);
@@ -48,6 +49,7 @@ export default function Form() {
   };
 
   return (
+    <>
     <div>
       <section>
         <form onSubmit={handleForm}>
@@ -87,5 +89,7 @@ export default function Form() {
         </form>
       </section>
     </div>
+    <Table count={count}/>
+   </>
   );
 }

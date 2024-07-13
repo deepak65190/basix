@@ -6,7 +6,7 @@ function Home() {
   return (
     <div className={styles.homeContainer}>
       <Form />
-      <Table />
+    
     </div>
   );
 }
